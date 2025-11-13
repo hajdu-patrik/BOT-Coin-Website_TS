@@ -118,7 +118,7 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
             Save
           </button>
           {/* meg kéne úgy csinálni, hogy popup lenne felül, hogy a meme elkészült! */}
-          {/* <Transition
+          <Transition
             show={showAlert}
             enter="transition-opacity duration-500"
             enterFrom="opacity-0"
@@ -129,7 +129,7 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
             className="fixed inset-0 left-[50%] right-[50%] top-10 flex aspect-square w-[10em] items-center justify-center rounded-lg bg-slate-400"
           >
             Meme is ready! :)
-          </Transition> */}
+          </Transition>
         </div>
         {/* Here you can edit the memes */}
         <Transition
