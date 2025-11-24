@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /*#region Default Settings */
 @layer base {
   *,
@@ -75,7 +76,6 @@
   }
   /* Handle */
   html::-webkit-scrollbar-thumb {
-    background: var(#252627);
     border: 1px solid;
     border-radius: 20px;
   }

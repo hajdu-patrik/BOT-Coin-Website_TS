@@ -1,16 +1,21 @@
+// src/app/memegenerator/page.tsx
+
 "use client";
 import { Transition } from "@headlessui/react";
 import React from "react";
 import { MemeEditor } from "@/app/(components)/MemeEditor";
 import Link from "next/link";
 import Footer from "../(components)/footer/footer";
+
 async function fetchMemeTemplates() {
   const memeTemplatesReq = await fetch(
-    "https://botcoinada.io/api/meme-templates"
+    // A hiba javítása: relatív útvonal használata a lokális API-hoz
+    "/api/meme-templates"
   );
   const memeTemplates = await memeTemplatesReq.json();
   return memeTemplates;
 }
+
 export default function MemeGenerator() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [memeTemplates, setMemeTemplates] = React.useState([]);
