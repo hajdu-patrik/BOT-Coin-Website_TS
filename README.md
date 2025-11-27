@@ -1,3 +1,9 @@
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![App Type](https://img.shields.io/badge/Type-Commercial_App-blue?style=flat)
+![Status](https://img.shields.io/badge/Status-Portfolio_Demo_Only-lightgrey?style=flat)
+![License](https://img.shields.io/badge/License-Proprietary_%2F_Closed_Source-red?style=flat)
 # Custom Web Application for BOT
 
 This repository contains the source code for a custom, full-stack web application built to meet the specific requirements of a commercial client.
