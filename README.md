@@ -4,6 +4,8 @@ This repository contains the source code for a custom, full-stack web applicatio
 
 The project features a modern, responsive frontend built with TypeScript and Tailwind CSS.
 
+---
+
 ## 🛠️ Technology Stack
 
 This project integrates the following technologies:
@@ -13,6 +15,7 @@ This project integrates the following technologies:
     * Tailwind CSS (for utility-first styling)
     * JavaScript
 
+---
 
 ## ⚠️ Important Notice: Project Status
 
