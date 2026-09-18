@@ -42,6 +42,7 @@ export default function Home() {
     <>
       {timer > 0 ? (
         <Transition
+          as="div"
           show={isIntroPageComplete}
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"
@@ -57,6 +58,7 @@ export default function Home() {
           <MobileHeader />
           <Header />
           <Transition
+            as="div"
             show={isTransitionComplete}
             enter="transition-opacity duration-500"
             enterFrom="opacity-0"

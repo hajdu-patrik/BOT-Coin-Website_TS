@@ -4,12 +4,12 @@ import Image from "next/image";
 const Social: React.FC = () => {
   return (
     <>
-      <div id="social" className=" scroll-mt-[2rem] ">
+      <div id="social" className=" scroll-mt-8 ">
         <div className=" flex select-none flex-col items-center justify-center text-center ">
           <h2 className="pb-[3.5em] text-[1.8em] md:text-[2.2em] lg:text-[2.5em] xl:text-[2.7em] 2xl:text-[3em] ">
             Social
           </h2>
-          <div className="flex flex-col md:flex-row  gap-[15rem] pb-[12em]">
+          <div className="flex flex-col md:flex-row  gap-60 pb-[12em]">
             <a href="https://twitter.com/botcoinada" target="_blank">
               <Image
                 src="/images/twitter.png"

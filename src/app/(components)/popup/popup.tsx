@@ -112,6 +112,7 @@ const Popup: React.FC = () => {
     <>
       {closeBox && PopUptimer! <= duration && (
         <Transition
+          as="div"
           show={PopUptimer! > 0}
           enter="transition-opacity duration-300"
           enterFrom="opacity-0"
@@ -120,7 +121,7 @@ const Popup: React.FC = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed bottom-10 left-[10%] z-[100] md:left-10">
+          <div className="fixed bottom-10 left-[10%] z-100 md:left-10">
             <audio controls autoPlay>
               <source src="sounds/achievement.ogg" type="audio/ogg" />
             </audio>

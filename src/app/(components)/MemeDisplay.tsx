@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useElementSize } from "usehooks-ts";
 import Draggable, { DraggableEvent } from "react-draggable";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { MemeTemplate } from "@/app/(data)/types";
 export const MemeDisplay = ({
   template,
@@ -11,12 +11,19 @@ export const MemeDisplay = ({
   values: Record<string, string>;
 }) => {
   const [memeRef, { width }] = useElementSize();
-  const ratio = width / template.background.width;
+  const ratio = width! / template.background.width;
   const [textareaPositions, setTextareaPositions] = useState(() =>
     template.textareas.map((textarea) => ({
       top: textarea.top * ratio,
       left: textarea.left * ratio,
     }))
+  );
+  // react-draggable needs a real DOM node ref (findDOMNode is unavailable in
+  // the React runtime the App Router uses for client components); one stable
+  // ref per draggable textarea.
+  const nodeRefs = useMemo(
+    () => template.textareas.map(() => React.createRef<HTMLSpanElement>()),
+    [template]
   );
 
   const handleDrag = (
@@ -48,6 +55,7 @@ export const MemeDisplay = ({
         template.textareas.map((textarea, index) => (
           <Draggable
             key={index}
+            nodeRef={nodeRefs[index]}
             onDrag={(e, data) => handleDrag(index, e, data)}
             bounds="parent"
             defaultPosition={{
@@ -57,6 +65,7 @@ export const MemeDisplay = ({
             defaultClassName="absolute inset-0 h-fit w-fit font-hs"
           >
             <span
+              ref={nodeRefs[index]}
               className={`${
                 textarea.color ?? "white"
               } contrast-outline cursor-grab select-none border-black leading-tight hover:border-2`}

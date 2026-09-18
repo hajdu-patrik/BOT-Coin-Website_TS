@@ -65,7 +65,7 @@ const Dailydrip: React.FC = () => {
   ];
 
   return (
-    <section id="dailydrip" className="scroll-mt-[1.8rem] md:scroll-mt-[13rem]">
+    <section id="dailydrip" className="scroll-mt-[1.8rem] md:scroll-mt-52">
       <div className="flex flex-col items-center justify-around pb-[3em] text-center">
         <h2 className="select-none pb-[3em] text-[1.8em] md:text-[2.2em] lg:text-[2.5em] xl:text-[2.7em] 2xl:text-[3em]">
           Daily Drip

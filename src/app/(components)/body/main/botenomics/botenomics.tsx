@@ -38,7 +38,7 @@ const Botenomics: React.FC = () => {
   return (
     <section
       id="botenomics"
-      className=" scroll-mt-[3.8rem] md:scroll-mt-[4rem]"
+      className=" scroll-mt-[3.8rem] md:scroll-mt-16"
     >
       <div className="my-[2em] flex flex-col text-center">
         <h2 className="select-none pb-[2.75em] text-[1.8em] md:text-[2.2em] lg:text-[2.5em] xl:text-[2.7em] 2xl:text-[3em]">

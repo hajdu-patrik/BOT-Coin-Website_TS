@@ -34,13 +34,14 @@ export default function MemeGenerator() {
       <header className="flex select-none flex-col items-center justify-center gap-8 py-6 text-[1.2em] sm:flex-row md:gap-16 md:text-[1.4em] lg:text-[1.6em] xl:text-[1.8em] 2xl:text-[2em]">
         <h1 className="text-center">Bot Meme Generator</h1>
         <Link href="/">
-          <button className="min-w-[10rem] rounded-lg bg-red-600 p-2 hover:opacity-60">
+          <button className="min-w-40 rounded-lg bg-red-600 p-2 hover:opacity-60">
             Website
           </button>
         </Link>
       </header>
       <main className="2xl:min-h-auto mx-auto min-h-screen max-w-[90%]">
         <Transition
+          as="div"
           show={isOpen}
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"

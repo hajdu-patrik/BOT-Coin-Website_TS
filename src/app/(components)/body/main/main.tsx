@@ -20,7 +20,7 @@ const Main: React.FC = () => {
         className="mt-[-2em] select-none object-contain opacity-30"
       />
       <div className="relative mt-[-2em] flex flex-col justify-evenly md:flex-row md:px-[2em]">
-        <p className="max-w-[50vh] select-none self-center px-2 pb-[2em] pt-[1em] text-justify text-[1.2em] md:self-start md:px-0 md:pb-[0em] md:text-[1.3em] lg:text-[1.4em] xl:text-[1.5em] 2xl:text-[1.6em]">
+        <p className="max-w-[50vh] select-none self-center px-2 pb-[2em] pt-[1em] text-justify text-[1.2em] md:self-start md:px-0 md:pb-0 md:text-[1.3em] lg:text-[1.4em] xl:text-[1.5em] 2xl:text-[1.6em]">
           Be a part of this wonderful BOT society, our goal is to show that it
           is indeed good to live as an NPC, because it can be done richly...
         </p>

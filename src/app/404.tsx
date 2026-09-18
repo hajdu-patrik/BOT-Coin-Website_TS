@@ -18,7 +18,7 @@ export default function FourOhFour() {
   }, []);
 
   return (
-    <div className="flex h-[100vh] w-full flex-col items-center justify-center">
+    <div className="flex h-screen w-full flex-col items-center justify-center">
       <Image
         src="/images/404.png"
         width={700}

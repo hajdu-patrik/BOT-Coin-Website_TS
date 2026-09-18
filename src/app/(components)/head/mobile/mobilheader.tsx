@@ -31,7 +31,7 @@ const MobileHeader: React.FC = () => {
   }, [open]);
 
   return (
-    <div className="sticky inset-0 z-[100] flex md:hidden">
+    <div className="sticky inset-0 z-100 flex md:hidden">
       <nav
         className={`${
           open
@@ -43,9 +43,9 @@ const MobileHeader: React.FC = () => {
       >
         <button onClick={handleSidebarButton} aria-label="menu">
           {!open ? (
-            <Bars3Icon className="ml-5 h-9 w-9 font-[800] shadow-2xl" />
+            <Bars3Icon className="ml-5 h-9 w-9 font-extrabold shadow-2xl" />
           ) : (
-            <XMarkIcon className="ml-2 h-9 w-9 font-[800] shadow-2xl" />
+            <XMarkIcon className="ml-2 h-9 w-9 font-extrabold shadow-2xl" />
           )}
         </button>
         <ul
@@ -66,7 +66,7 @@ const MobileHeader: React.FC = () => {
                     className="mb-2 flex items-center border-none py-2 px-4 text-xl text-[#111218]"
                   >
                     <span
-                      className={`cursor-pointer font-[600] transition-all hover:scale-[1.05] hover:font-semibold ${
+                      className={`cursor-pointer font-semibold transition-all hover:scale-[1.05] hover:font-semibold ${
                         showText ? "opacity-100" : "opacity-0"
                       }`}
                     >
@@ -84,7 +84,7 @@ const MobileHeader: React.FC = () => {
                     className="mb-2 flex items-center border-none py-2 px-4 text-xl text-[#111218]"
                   >
                     <span
-                      className={`cursor-pointer font-[600] transition-all hover:scale-[1.05] hover:font-semibold ${
+                      className={`cursor-pointer font-semibold transition-all hover:scale-[1.05] hover:font-semibold ${
                         showText ? "opacity-100" : "opacity-0"
                       }`}
                     >

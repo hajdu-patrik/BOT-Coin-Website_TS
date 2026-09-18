@@ -13,7 +13,7 @@ const Seeders: React.FC = () => {
     setOpen(open === value ? 0 : value);
   };
   return (
-    <section id="ogholders" className="scroll-mt-[10rem] md:scroll-mt-[5rem]">
+    <section id="ogholders" className="scroll-mt-40 md:scroll-mt-20">
       <div className="flex select-none flex-col items-center justify-center text-center">
         <h2 className="pb-[2.8em] text-[1.8em] md:text-[2.2em] lg:text-[2.5em] xl:text-[2.7em] 2xl:text-[3em]">
           OG Holders

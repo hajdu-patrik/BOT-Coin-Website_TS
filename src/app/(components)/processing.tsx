@@ -13,7 +13,7 @@ const Processing = () => {
   };
   return (
     <div
-      className="flex h-[100vh] w-full cursor-pointer select-none flex-col items-center justify-center"
+      className="flex h-screen w-full cursor-pointer select-none flex-col items-center justify-center"
       onClick={handlePlayAudio}
     >
       <Image

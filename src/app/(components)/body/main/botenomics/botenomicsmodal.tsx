@@ -32,7 +32,7 @@ export default function Botenomicsmodal() {
       {modal && (
         <div className="botenomicsmodal select-none">
           <div onClick={toggleModal} className="overlay"></div>
-          <div className="botenomicsmodal-content | absolute top-[45%] left-[50%] bg-[#273238] rounded-[1rem] w-screen md:w-fit md:h-fit text-left p-[1em]"> 
+          <div className="botenomicsmodal-content | absolute top-[45%] left-[50%] bg-[#273238] rounded-2xl w-screen md:w-fit md:h-fit text-left p-[1em]"> 
             <code className="flex flex-col overflow-x-scroll overflow-y-hidden md:overflow-hidden">
               <div className=" text-yellow-600 font-hs">&#91;</div>
                 <pre className=" text-purple-600 font-hs"><span className="text-blue-600 ">"</span>721<span className="text-blue-600 ">": </span><span className="text-purple-600 font-hs">&#123;</span></pre> 
@@ -59,7 +59,7 @@ export default function Botenomicsmodal() {
                 <span className=" text-yellow-600 font-hs">&#93;</span>
             </code>
             <div>
-              <button className="absolute top-[1rem] right-[1rem]" onClick={toggleModal}>
+              <button className="absolute top-4 right-4" onClick={toggleModal}>
                 <Image
                     src="/images/x.png"
                     width={50}

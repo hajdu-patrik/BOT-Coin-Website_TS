@@ -86,7 +86,7 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
         <div className="self-center px-2">
           <h2 className="text-[1.25em] font-bold">Select an image</h2>
           <select
-            className="select-bordered w-full rounded-[0.5rem] p-4"
+            className="select-bordered w-full rounded-lg p-4"
             aria-label="memelist"
             value={templateId}
             onChange={handleTemplateChange}
@@ -104,7 +104,7 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
                 {textarea.id}
               </label>
               <input
-                className="input-bordered w-full rounded-[0.5rem] p-4"
+                className="input-bordered w-full rounded-lg p-4"
                 type="text"
                 {...register(`values.${textarea.id}`)}
                 name={`values.${textarea.id}`}
@@ -112,13 +112,14 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
             </div>
           ))}
           <button
-            className="sm:-text-[1.3em] mx-auto mt-5 block min-w-[10rem] rounded-lg bg-red-600 p-2 font-wp text-[1.2em] hover:opacity-60 md:text-[1.4em] lg:text-[1.6em] xl:text-[1.8em] 2xl:text-[2em]"
+            className="sm:-text-[1.3em] mx-auto mt-5 block min-w-40 rounded-lg bg-red-600 p-2 font-wp text-[1.2em] hover:opacity-60 md:text-[1.4em] lg:text-[1.6em] xl:text-[1.8em] 2xl:text-[2em]"
             type="submit"
           >
             Save
           </button>
           {/* meg kéne úgy csinálni, hogy popup lenne felül, hogy a meme elkészült! */}
           <Transition
+            as="div"
             show={showAlert}
             enter="transition-opacity duration-500"
             enterFrom="opacity-0"
@@ -133,6 +134,7 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
         </div>
         {/* Here you can edit the memes */}
         <Transition
+          as="div"
           show={!isTransitioning}
           enter="transition-opacity duration-100"
           enterFrom="opacity-0"

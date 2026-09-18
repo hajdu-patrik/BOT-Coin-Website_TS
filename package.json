@@ -7,36 +7,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
-    "@heroicons/react": "^2.0.18",
-    "@types/node": "18.16.0",
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
-    "autoprefixer": "10.4.14",
-    "axios": "^1.4.0",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
+    "@headlessui/react": "^2.2.10",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "26.6.1",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "axios": "^1.20.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.5",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
-    "lightbox.js-react": "^0.6.4",
-    "mongoose": "^7.3.0",
-    "next": "^16.2.6",
-    "postcss": "^8.5.10",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-draggable": "^4.4.7",
-    "react-hook-form": "^7.43.9",
-    "tailwindcss": "3.3.1",
+    "lightbox.js-react": "^0.6.9",
+    "mongoose": "^9.10.1",
+    "next": "^16.3.5",
+    "postcss": "^8.5.28",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-draggable": "^4.7.2",
+    "react-hook-form": "^7.88.0",
+    "tailwindcss": "4.3.3",
     "typescript": "^6.0.3",
-    "usehooks-ts": "^2.9.1"
+    "usehooks-ts": "^2.16.0"
   },
   "devDependencies": {
-    "daisyui": "^2.51.6"
+    "daisyui": "^5.7.42"
   },
   "overrides": {
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.28"
   }
 }
