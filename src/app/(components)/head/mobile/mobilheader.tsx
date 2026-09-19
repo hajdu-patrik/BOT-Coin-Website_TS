@@ -2,6 +2,7 @@ import React from "react";
 import useOutsideClick from "./Sidebarclose";
 import { tabcollection, tabcollection2 } from "../tabcollection";
 import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Button } from "../../ui/Button";
 
 const MobileHeader: React.FC = () => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -37,24 +38,24 @@ const MobileHeader: React.FC = () => {
           open
             ? "fixed bottom-0 m-0 h-screen w-[80%] p-5 pt-10"
             : "h-screen w-0"
-        } absolute inset-0 pt-5 duration-300`}
+        } absolute inset-0 pt-5 duration-300 transition-[width]`}
         ref={menuRef}
         id="mobileheader"
       >
-        <button onClick={handleSidebarButton} aria-label="menu">
+        <Button onClick={handleSidebarButton} aria-label="menu">
           {!open ? (
             <Bars3Icon className="ml-5 h-9 w-9 font-extrabold shadow-2xl" />
           ) : (
             <XMarkIcon className="ml-2 h-9 w-9 font-extrabold shadow-2xl" />
           )}
-        </button>
+        </Button>
         <ul
           className={`mt-[8vw] flex flex-col overflow-hidden text-xl font-medium text-white`}
           role="list"
         >
           <li>
             <a href="#home">
-              <HomeIcon className="h-16 w-16 cursor-pointer py-2 px-4 text-[#111218] transition-all hover:scale-[1.05] hover:font-semibold" />
+              <HomeIcon className="h-16 w-16 cursor-pointer py-2 px-4 text-[#111218] transition-transform hover:scale-[1.05] hover:font-semibold" />
             </a>
           </li>
           <li>
@@ -66,7 +67,7 @@ const MobileHeader: React.FC = () => {
                     className="mb-2 flex items-center border-none py-2 px-4 text-xl text-[#111218]"
                   >
                     <span
-                      className={`cursor-pointer font-semibold transition-all hover:scale-[1.05] hover:font-semibold ${
+                      className={`cursor-pointer font-semibold transition-[opacity,scale] hover:scale-[1.05] hover:font-semibold ${
                         showText ? "opacity-100" : "opacity-0"
                       }`}
                     >
@@ -84,7 +85,7 @@ const MobileHeader: React.FC = () => {
                     className="mb-2 flex items-center border-none py-2 px-4 text-xl text-[#111218]"
                   >
                     <span
-                      className={`cursor-pointer font-semibold transition-all hover:scale-[1.05] hover:font-semibold ${
+                      className={`cursor-pointer font-semibold transition-[opacity,scale] hover:scale-[1.05] hover:font-semibold ${
                         showText ? "opacity-100" : "opacity-0"
                       }`}
                     >

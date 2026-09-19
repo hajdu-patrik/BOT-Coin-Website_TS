@@ -7,6 +7,7 @@ import { saveAs } from "file-saver";
 import { Transition } from "@headlessui/react";
 import React from "react";
 import axios from "axios";
+import { Button } from "./ui/Button";
 const textValues = (template: MemeTemplate) =>
   template.textareas.reduce(
     (values, ta) => ({
@@ -111,12 +112,13 @@ export const MemeEditor = ({ templates }: { templates: MemeTemplate[] }) => {
               />
             </div>
           ))}
-          <button
-            className="sm:-text-[1.3em] mx-auto mt-5 block min-w-40 rounded-lg bg-red-600 p-2 font-wp text-[1.2em] hover:opacity-60 md:text-[1.4em] lg:text-[1.6em] xl:text-[1.8em] 2xl:text-[2em]"
+          <Button
+            variant="cta"
+            className="sm:-text-[1.3em] mx-auto mt-5 block font-wp text-[1.2em] md:text-[1.4em] lg:text-[1.6em] xl:text-[1.8em] 2xl:text-[2em]"
             type="submit"
           >
             Save
-          </button>
+          </Button>
           {/* meg kéne úgy csinálni, hogy popup lenne felül, hogy a meme elkészült! */}
           <Transition
             as="div"

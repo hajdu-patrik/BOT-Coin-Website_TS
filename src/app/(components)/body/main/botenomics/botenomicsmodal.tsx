@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Button } from "../../../ui/Button";
 
 export default function Botenomicsmodal() {
 
@@ -10,7 +11,7 @@ export default function Botenomicsmodal() {
   return (
     <>
     <div className="relative select-none">
-    <button onClick={toggleModal}>
+    <Button onClick={toggleModal}>
       <Image
       src="/images/click.png"
       width={500}
@@ -26,9 +27,9 @@ export default function Botenomicsmodal() {
       draggable={false}
       alt="Botenomics Percentage Graph"
       className="object-contain w-[400px] h-[400px] sm:-w-[500px] sm:-h-[500px]"
-      />  
-      </button>
-    </div>     
+      />
+      </Button>
+    </div>
       {modal && (
         <div className="botenomicsmodal select-none">
           <div onClick={toggleModal} className="overlay"></div>
@@ -59,7 +60,7 @@ export default function Botenomicsmodal() {
                 <span className=" text-yellow-600 font-hs">&#93;</span>
             </code>
             <div>
-              <button className="absolute top-4 right-4" onClick={toggleModal}>
+              <Button className="absolute top-4 right-4" onClick={toggleModal}>
                 <Image
                     src="/images/x.png"
                     width={50}
@@ -67,7 +68,7 @@ export default function Botenomicsmodal() {
                     draggable={false}
                     alt="CLOSE HERE"
                 />
-              </button>
+              </Button>
             </div>
           </div>
         </div>

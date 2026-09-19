@@ -16,6 +16,10 @@ const Main: React.FC = () => {
         height={500}
         draggable={false}
         priority={true}
+        // Next's image optimizer always serves animated GIFs unmodified, so
+        // skipping it removes a redundant round-trip through /_next/image
+        // and keeps the URL matching the <link rel="preload"> in layout.tsx.
+        unoptimized
         alt="BOT.gif"
         className="mt-[-2em] select-none object-contain opacity-30"
       />

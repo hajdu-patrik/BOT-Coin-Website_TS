@@ -34,7 +34,11 @@ export const MemeDisplay = ({
     [template]
   );
 
-  const handleDrag = (
+  // Committed once the gesture ends (onStop) rather than on every pointer-move
+  // tick (onDrag): react-draggable already moves the dragged node itself via
+  // its own internal transform, so re-rendering MemeDisplay on every drag
+  // frame bought nothing but layout/reconciliation work while dragging.
+  const handleDragStop = (
     index: number,
     _e: DraggableEvent,
     { x, y }: { x: number; y: number }
@@ -44,7 +48,6 @@ export const MemeDisplay = ({
       top: y,
       left: x,
     };
-    // console.log(newPositions[index]);
     setTextareaPositions(newPositions);
   };
 
@@ -64,7 +67,7 @@ export const MemeDisplay = ({
           <Draggable
             key={index}
             nodeRef={nodeRefs[index]}
-            onDrag={(e, data) => handleDrag(index, e, data)}
+            onStop={(e, data) => handleDragStop(index, e, data)}
             bounds="parent"
             defaultPosition={{
               x: textareaPositions[index]?.left || 0,

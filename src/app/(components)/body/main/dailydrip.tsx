@@ -44,7 +44,7 @@ const Dailydrip: React.FC = () => {
       classnames: `${
         isVisible
           ? "xl:appear xl:duration-500"
-          : "xl:transition-all xl:opacity-0"
+          : "xl:transition-opacity xl:opacity-0"
       }`,
       height: getResponsiveHeight(80),
     },
@@ -53,12 +53,15 @@ const Dailydrip: React.FC = () => {
       alt: "Dancing Image",
       classnames: "",
       height: getResponsiveHeight(80),
+      // Next's image optimizer serves animated GIFs unmodified anyway, so
+      // skip the extra /_next/image round-trip for this one.
+      unoptimized: true,
     },
     {
       src: "/images/hoodback.png",
       alt: "Hoodie Back Side",
       classnames: `${
-        isVisible ? "xl:appear" : "xl:transition-all xl:opacity-0"
+        isVisible ? "xl:appear" : "xl:transition-opacity xl:opacity-0"
       }`,
       height: getResponsiveHeight(80),
     },
@@ -79,6 +82,7 @@ const Dailydrip: React.FC = () => {
                 height={500}
                 draggable={false}
                 alt={item.alt}
+                unoptimized={item.unoptimized}
                 className={`${item.classnames} md:-w-[500px] md:-h-[500px] h-[${item.height}] aspect-square w-[400px] object-contain`}
               />
             </React.Fragment>

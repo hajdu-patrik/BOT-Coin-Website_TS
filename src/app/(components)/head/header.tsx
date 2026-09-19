@@ -3,6 +3,7 @@ import { tabcollection, tabcollection2 } from "./tabcollection";
 import dynamic from "next/dynamic";
 import React from "react";
 import Image from "next/image";
+import { Button } from "../ui/Button";
 
 const Header: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
             <Tab anchor={item.anchor} tabname={item.tabname} key={index} />
           ))}
           <a href="#header">
-            <button aria-label="BOT Logo">
+            <Button aria-label="BOT Logo">
               <Image
                 src="/images/pfp.png"
                 priority={true}
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
                 draggable={false}
                 alt="BOT Logo"
               />
-            </button>
+            </Button>
           </a>
           {tabcollection2.map((item, index) => (
             <Tab anchor={item.anchor} tabname={item.tabname} key={index} />

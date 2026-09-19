@@ -105,6 +105,18 @@
     background: #191409;
   }
   /*#endregion Scrollbar */
+  /* Respect the OS-level "reduce motion" preference: only kicks in for
+     visitors who opted into it, no visible change for anyone else. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 @layer utilities {
   /*#endregion Default Settings */
@@ -142,7 +154,7 @@
     transform: translateX(0);
   }
   .appear {
-    @apply opacity-100 transition-all duration-300;
+    @apply opacity-100 transition-opacity duration-300;
   }
   /*#endregion Animations */
   /*#region Modal, onClick events */

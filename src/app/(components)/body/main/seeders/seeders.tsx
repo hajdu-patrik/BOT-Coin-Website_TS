@@ -33,7 +33,7 @@ const Seeders: React.FC = () => {
                   height={300}
                   draggable={false}
                   alt="NFT Preview"
-                  className="transition-all hover:scale-105"
+                  className="transition-transform hover:scale-105"
                 />
               </a>
             ))}
@@ -112,6 +112,10 @@ const Seeders: React.FC = () => {
                       alt={item.alt}
                       className="object-contain"
                       sizes="100vw"
+                      // Both entries here (botthinking.gif, loading.gif) are
+                      // animated, and next/image always serves those
+                      // unmodified - skip the extra optimizer round-trip.
+                      unoptimized
                     />
                   </div>
                 )}
