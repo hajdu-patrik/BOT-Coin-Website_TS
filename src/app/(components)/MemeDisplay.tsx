@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { useElementSize } from "usehooks-ts";
+import { useResizeObserver } from "usehooks-ts";
 import Draggable, { DraggableEvent } from "react-draggable";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { MemeTemplate } from "@/app/(data)/types";
 export const MemeDisplay = ({
   template,
@@ -10,7 +10,14 @@ export const MemeDisplay = ({
   template: MemeTemplate;
   values: Record<string, string>;
 }) => {
-  const [memeRef, { width }] = useElementSize();
+  const memeRef = useRef<HTMLDivElement>(null);
+  // usehooks-ts's UseResizeObserverOptions still types `ref` as a non-null
+  // RefObject even though useRef(<T>(null)) now returns RefObject<T | null>
+  // in React 19 - the hook itself null-checks ref.current internally before
+  // observing, so this narrows only the type at the call boundary.
+  const { width } = useResizeObserver({
+    ref: memeRef as React.RefObject<HTMLDivElement>,
+  });
   const ratio = width! / template.background.width;
   const [textareaPositions, setTextareaPositions] = useState(() =>
     template.textareas.map((textarea) => ({
