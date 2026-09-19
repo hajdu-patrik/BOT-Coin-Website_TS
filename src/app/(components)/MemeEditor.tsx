@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { MemeDisplay } from "./MemeDisplay";
 import { MemeTemplate } from "@/app/(data)/types";
-import html2canvas from "html2canvas";
+import html2canvas from "html2canvas-pro";
 import { saveAs } from "file-saver";
 import { Transition } from "@headlessui/react";
 import React from "react";

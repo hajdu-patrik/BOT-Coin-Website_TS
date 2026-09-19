@@ -18,7 +18,8 @@ export const MemeDisplay = ({
   const { width } = useResizeObserver({
     ref: memeRef as React.RefObject<HTMLDivElement>,
   });
-  const ratio = width! / template.background.width;
+  // Whole pixels, like the offsetWidth-based measurement this replaced: keeps the text scale identical
+  const ratio = Math.round(width!) / template.background.width;
   const [textareaPositions, setTextareaPositions] = useState(() =>
     template.textareas.map((textarea) => ({
       top: textarea.top * ratio,
