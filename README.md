@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Portfolio_Demo-lightgrey?style=flat)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=flat)
 
-This repository contains the source code for a custom, full-stack web application built to meet the specific requirements of a commercial client.
+This repository contains the source code for a custom website built to meet the specific requirements of a commercial client.
 
 The project is a modern, responsive web application developed using **Next.js (React)** and **TypeScript**, styled with **Tailwind CSS**. It serves as a comprehensive platform featuring interactive elements and responsive design.
 
